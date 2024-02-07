@@ -3,9 +3,373 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="/main.css" />
+    <title>Portfolio</title>
   </head>
+
   <body>
-    <h1>salom</h1>
+    <div class="frame">
+      <div class="main_frame">
+        <div class="left_frame">
+          <div class="left_1">
+            <div class="left_1-1">
+              <img
+                src="images/profile.png"
+                width="156px"
+                height="142px"
+                alt=""
+              />
+            </div>
+            <div class="left_1-2"><%=user.name %></div>
+            <div class="left_1-3"><%=user.profession %></div>
+            <div class="left-icons">
+              <a class="link_href" href="">
+                <div class="icon">
+                  <img src="/author/icon/Facebook.svg" alt="" class="icon-1" />
+                </div>
+              </a>
+
+              <a class="link_href" href="">
+                <div class="icon">
+                  <img src="/author/icon/instagram.svg" alt="" class="icon-1" />
+                </div>
+              </a>
+
+              <a class="link_href" href="">
+                <div class="icon">
+                  <img src="/author/icon/Twitter.svg" alt="" class="icon-1" />
+                </div>
+              </a>
+
+              <a class="link_href" href="">
+                <div class="icon">
+                  <img src="/author/icon/Linkeding.svg" alt="" class="icon-1" />
+                </div>
+              </a>
+
+              <a class="link_href" href="">
+                <div class="icon">
+                  <img src="/author/icon/Youtube.svg" alt="" class="icon-1" />
+                </div>
+              </a>
+
+              <a class="link_href" href="">
+                <div class="icon">
+                  <img src="/author/icon/Dribbble.svg" alt="" class="icon-2" />
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="marginer"></div>
+
+          <div class="left_2">
+            <div class="left_2-1">
+              <div class="left_2_title">Age:</div>
+              <div><%=user.age %></div>
+            </div>
+            <div class="left_2-1">
+              <div class="left_2_title">Residence:</div>
+              <div><%=user.residence%></div>
+            </div>
+            <div class="left_2-1">
+              <div class="left_2_title">Freelance:</div>
+              <div><%=user.freelance%></div>
+            </div>
+            <div class="left_2-1">
+              <div class="left_2_title">Address:</div>
+              <div><%=user.adress%></div>
+            </div>
+          </div>
+          <div class="marginer"></div>
+
+          <div class="left_3">
+            <div class="left_3_title">Languages</div>
+            <div>
+              <div class="left_3_lang">
+                <div class="left_3_content"><%=user.languages[0] %></div>
+                <div class="left_3_content">100%</div>
+              </div>
+              <div class="progress" style="height: 4px">
+                <div
+                  class="progress-bar bg-warning"
+                  role="progressbar"
+                  style="width: 100%"
+                  aria-valuenow="75"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+            </div>
+            <div>
+              <div class="left_3_lang">
+                <div class="left_3_content"><%=user.languages[1] %></div>
+                <div class="left_3_content">100%</div>
+              </div>
+              <div class="progress" style="height: 4px">
+                <div
+                  class="progress-bar bg-warning"
+                  role="progressbar"
+                  style="width: 100%"
+                  aria-valuenow="75"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+            </div>
+            <div>
+              <div class="left_3_lang">
+                <div class="left_3_content"><%=user.languages[2] %></div>
+                <div class="left_3_content">80%</div>
+              </div>
+              <div class="progress" style="height: 4px">
+                <div
+                  class="progress-bar bg-warning"
+                  role="progressbar"
+                  style="width: 80%"
+                  aria-valuenow="75"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+            </div>
+          </div>
+          <div class="marginer"></div>
+
+          <div class="left_4">
+            <div class="left_3_title">Skills</div>
+            <div>
+              <div class="left_3_lang">
+                <div class="left_3_content"><%=user.skills[0] %></div>
+                <div class="left_3_content">100%</div>
+              </div>
+              <div class="progress" style="height: 4px">
+                <div
+                  class="progress-bar bg-warning"
+                  role="progressbar"
+                  style="width: 100%"
+                  aria-valuenow="75"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+            </div>
+            <div>
+              <div class="left_3_lang">
+                <div class="left_3_content"><%=user.skills[1] %></div>
+                <div class="left_3_content">100%</div>
+              </div>
+              <div class="progress" style="height: 4px">
+                <div
+                  class="progress-bar bg-warning"
+                  role="progressbar"
+                  style="width: 100%"
+                  aria-valuenow="75"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+            </div>
+            <div>
+              <div class="left_3_lang">
+                <div class="left_3_content"><%=user.skills[2] %></div>
+                <div class="left_3_content">100%</div>
+              </div>
+              <div class="progress" style="height: 4px">
+                <div
+                  class="progress-bar bg-warning"
+                  role="progressbar"
+                  style="width: 100%"
+                  aria-valuenow="75"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+            </div>
+            <div>
+              <div class="left_3_lang">
+                <div class="left_3_content"><%=user.skills[3] %></div>
+                <div class="left_3_content">100%</div>
+              </div>
+              <div class="progress" style="height: 4px">
+                <div
+                  class="progress-bar bg-warning"
+                  role="progressbar"
+                  style="width: 100%"
+                  aria-valuenow="75"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+            </div>
+            <div>
+              <div class="left_3_lang">
+                <div class="left_3_content"><%=user.skills[4] %></div>
+                <div class="left_3_content">40%</div>
+              </div>
+              <div class="progress" style="height: 4px">
+                <div
+                  class="progress-bar bg-warning"
+                  role="progressbar"
+                  style="width: 40%"
+                  aria-valuenow="75"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+            </div>
+          </div>
+          <div class="marginer"></div>
+
+          <div class="left_5">
+            <div class="left_3_title">Extra Skills</div>
+            <div>
+              <div class="left_5_lang">
+                <img src="/author/icon/extra.png" alt="" />
+                <div class="left_3_content"><%=user.extra_skills[0] %></div>
+              </div>
+            </div>
+            <div>
+              <div class="left_5_lang">
+                <img src="/author/icon/extra.png" alt="" />
+                <div class="left_3_content"><%=user.extra_skills[1] %></div>
+              </div>
+            </div>
+            <div>
+              <div class="left_5_lang">
+                <img src="/author/icon/extra.png" alt="" />
+                <div class="left_3_content"><%=user.extra_skills[2] %></div>
+              </div>
+            </div>
+            <div>
+              <div class="left_5_lang">
+                <img src="/author/icon/extra.png" alt="" />
+                <div class="left_3_content"><%=user.extra_skills[3] %></div>
+              </div>
+            </div>
+          </div>
+          <div class="marginer"></div>
+        </div>
+        <div class="midd_frame">
+          <div class="midd_frame_top">
+            <img src="/author/icon/Polygon.svg" alt="" class="polygon" />
+            <img
+              src="/author/icon/rectangle52.svg"
+              alt=""
+              class="rectangle52"
+            />
+            <img
+              src="/author/icon/rectangle51.svg"
+              alt=""
+              class="rectangle51"
+            />
+            <img src="/author/icon/Ellipse15.svg" alt="" class="Ellipse15" />
+            <img src="/author/icon/Ellipse13.svg" alt="" class="Ellipse13" />
+            <img src="/author/icon/Ellipse16.svg" alt="" class="Ellipse16" />
+            <img src="/author/icon/Ellipse12.svg" alt="" class="Ellipse12" />
+
+            <div>
+              <div class="midd_frame_Doctor">
+                Doctor neurologists in OHSU Hospital
+              </div>
+              <div class="midd_frame_desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et,
+                volutpat feugiat placerat lobortis. Natoque rutrum semper sed
+                suspendisse nunc lectus.
+              </div>
+              <button class="midd_frame_btn">HIRE ME -></button>
+            </div>
+            <div>
+              <img src="/author/images/middimage.png" alt="" />
+            </div>
+          </div>
+          <div class="midd_frame_bottom">
+            <div class="midd_frame_bottom-1">My services</div>
+            <div class="midd_frame_bottom-2">
+              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+              amet sint. Velit officia consequat duis enim velit mollit. lorem
+              ipsum
+            </div>
+            <div class="midd_frame_bottom-box">
+              <div class="midd_frame_bottom-boxs">
+                <img
+                  src="/author/icon/coding.svg"
+                  alt=""
+                  class="midd_frame_bottom_service_icon"
+                />
+                <div class="midd_frame_bottom_service_title">
+                  web development
+                </div>
+                <div class="midd_frame_bottom_service_desc">
+                  blog, e-commerce
+                </div>
+              </div>
+              <div class="midd_frame_bottom-boxs">
+                <img
+                  src="/author/icon/design.svg"
+                  alt=""
+                  class="midd_frame_bottom_service_icon"
+                />
+                <div class="midd_frame_bottom_service_title">uI/uX design</div>
+                <div class="midd_frame_bottom_service_desc">
+                  Mobile app, website design
+                </div>
+              </div>
+              <div class="midd_frame_bottom-boxs">
+                <img
+                  src="/author/icon/mic.svg"
+                  alt=""
+                  class="midd_frame_bottom_service_icon"
+                />
+                <div class="midd_frame_bottom_service_title">Sound design</div>
+                <div class="midd_frame_bottom_service_desc">
+                  Voice Over, Beat Making
+                </div>
+              </div>
+              <div class="midd_frame_bottom-boxs">
+                <img
+                  src="/author/icon/game.svg"
+                  alt=""
+                  class="midd_frame_bottom_service_icon"
+                />
+                <div class="midd_frame_bottom_service_title">Game design</div>
+                <div class="midd_frame_bottom_service_desc">
+                  Character Design, Props & Objects
+                </div>
+              </div>
+              <div class="midd_frame_bottom-boxs">
+                <img
+                  src="/author/icon/per.svg"
+                  alt=""
+                  class="midd_frame_bottom_service_icon"
+                />
+                <div class="midd_frame_bottom_service_title">photography</div>
+                <div class="midd_frame_bottom_service_desc">
+                  portrait, product photography
+                </div>
+              </div>
+              <div class="midd_frame_bottom-boxs1">
+                <div class="midd_frame_bottom_service_title-1">Advertising</div>
+                <div class="midd_frame_bottom_service_desc-1">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae
+                  nulla diam in ac dictum a urna viverra morbi.
+                </div>
+                <div class="midd_frame_bottom_service_btn-1">ORDER NOW ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right_frame"></div>
+      </div>
+    </div>
   </body>
 </html>

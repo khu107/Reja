@@ -9,6 +9,8 @@
 //   "endi dam oling, foydasi yuq endi", // 60
 // ];
 
+const { text } = require("express");
+
 // function maslahatBering(a, callback) {
 //   if (typeof a !== "number") callback("insert number", null);
 //   else if (a <= 20) callback(null, list[0]);
@@ -81,24 +83,121 @@
 // A - Task
 
 // array method dan foydalangan holda
-function countLetter(target, str) {
-  let count = 0;
-  str.split("").forEach((v) => {
-    if (v === target) count++;
-  });
-  return `forEach: ${count}`;
-}
+// function countLetter(target, str) {
+//   let count = 0;
+//   str.split("").forEach((v) => {
+//     if (v === target) count++;
+//   });
+//   return `forEach: ${count}`;
+// }
 
-console.log(countLetter("e", "engineer"));
+// console.log(countLetter("e", "engineer"));
 
-// for dan foydalangan holda
+// // for dan foydalangan holda
 
-function countLetter1(target, str) {
-  let count = 0;
-  for (let i = 0; i < str.length; i++) {
-    if (str[i] === target) count++;
-  }
-  return `for: ${count}`;
-}
+// function countLetter1(target, str) {
+//   let count = 0;
+//   for (let i = 0; i < str.length; i++) {
+//     if (str[i] === target) count++;
+//   }
+//   return `for: ${count}`;
+// }
 
-console.log(countLetter1("e", "engineer"));
+// console.log(countLetter1("e", "engineer"));
+
+// const animals_list = [
+//   "fox",
+//   "ant",
+//   "bird",
+//   "lion",
+//   "wolf",
+//   "deer",
+//   "bear",
+//   "frog",
+//   "hen",
+//   "mole",
+//   "duck",
+//   "goat",
+//   "dog",
+//   "bat",
+//   "cock",
+//   "cow",
+// ];
+
+// let txt = "foxdeer";
+// const animals = animals_list.filter((animal) => {
+//   return txt.includes(animal);
+// });
+
+// function hayvon(txt) {
+//   const possibleAnimals = animals_list.filter((animal) => {
+//     const animalLetters = animal.split("");
+//     let txtCopy = txt;
+
+//     for (const letter of animalLetters) {
+//       const index = txtCopy.indexOf(letter);
+
+//       if (index !== -1) {
+//         txtCopy = txtCopy.slice(0, index) + txtCopy.slice(index + 1);
+//       } else {
+//         return false;
+//       }
+//     }
+
+//     return true;
+//   });
+//   return possibleAnimals;
+// }
+// console.log(hayvon("dgolfwat"));
+
+// function sonlar(son) {
+//   let count = 0;
+//   const sonlar = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+//   for (let i = 0; i < son.length; i++) {
+//     if (sonlar.indexOf(son[i]) !== -1) {
+//       count++;
+//     } else {
+//       false;
+//     }
+//   }
+//   return count;
+// }
+// console.log(sonlar("1a1a5a1a1"));
+
+// function sonlar(son) {
+//   let count = 0;
+//   const s = [];
+//   const sonlar = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+//   son.split("").forEach((element) => {
+//     if (sonlar.indexOf(element) !== -1) {
+//       s.push(element);
+//       count++;
+//     } else {
+//       false;
+//     }
+//   });
+
+//   return count, s;
+// }
+
+// console.log(sonlar("1a1a5a1a16"));
+
+// function sonlar(son) {
+//   const sonlar = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+//   const re = son
+//     .split("")
+//     .filter((element) => sonlar.indexOf(element) !== -1).length;
+
+//   return re;
+// }
+// console.log(sonlar("1a1a5a1a16"));
+
+// Shunday function tuzing, u 1ta string parametrga ega bolsin, hamda osha stringda qatnashgan raqamlarni sonini bizga return qilsin.
+// MASALAN countDigits("ad2a54y79wet0sfgb9") 7ni return qiladi.
+
+// function sonlar(str) {
+//   let regex = /[^0-9]/g;
+//   return str.replace(regex, "").length;
+// }
+
+// console.log(sonlar("1a2aaa0aaas35"));

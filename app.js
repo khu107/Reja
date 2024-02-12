@@ -24,10 +24,30 @@ app.set("views", "views");
 app.set("view engine", "ejs"); // ejs engine template
 
 // 4. router lar
-app.post("/create-item", function (req, res) {});
+app.post("/create-item", function (req, res) {
+  console.log(req.body);
+  const new_reja = req.body.reja;
+  db.collection("plans").insertOne({ reja: new_reja }, (err, data) => {
+    if (err) {
+      console.log(err);
+      res.end("err");
+    } else {
+      res.end("success");
+    }
+  });
+});
 
 app.get("/", (req, res) => {
-  res.render("reja");
+  db.collection("plans")
+    .find()
+    .toArray((err, data) => {
+      if (err) {
+        console.log(err);
+        res.end("err");
+      } else {
+        res.render("reja", { items: data });
+      }
+    });
 });
 
 module.exports = app;

@@ -24,13 +24,10 @@ app.set("views", "views");
 app.set("view engine", "ejs"); // ejs engine template
 
 // 4. router lar
-app.post("/create-item", function (req, res) {
-  // console.log(req.body);
-  // res.json({ test: "success" });
-});
+app.post("/create-item", function (req, res) {});
 
-app.get("/author", (req, res) => {
-  res.render("author", { user: user });
+app.get("/", (req, res) => {
+  res.render("reja");
 });
 
 const server = http.createServer(app);

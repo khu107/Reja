@@ -43,3 +43,24 @@ document.getElementById("create-form").addEventListener("submit", function (e) {
       console.log(err);
     });
 });
+
+document.addEventListener("click", function (e) {
+  // delete
+  if (e.target.classList.contains("delete-me")) {
+    if (confirm("Aniq uchirmoqchimisiz!!")) {
+      axios
+        .post("/delete-item", { id: e.target.getAttribute("data-id") })
+        .then((response) => {
+          e.target.parentElement.parentElement.remove();
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
+  }
+
+  // edit
+  if (e.target.classList.contains("edit-me")) {
+    alert("siz edit-me tugmasini bosdiyz");
+  }
+});

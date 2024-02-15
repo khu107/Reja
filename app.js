@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const fs = require("fs");
 const db = require("./server").db();
+const mongodb = require("mongodb");
 
 let user;
 
@@ -30,6 +31,18 @@ app.post("/create-item", function (req, res) {
     console.log(data.ops[0]);
     res.json(data.ops[0]);
   });
+});
+
+app.post("/delete-item", (req, res) => {
+  const id = req.body.id;
+  db.collection("plans").deleteOne(
+    { _id: new mongodb.ObjectId(id) },
+    (err, data) => {
+      res.json({
+        status: "succsess",
+      });
+    }
+  );
 });
 
 app.get("/", (req, res) => {

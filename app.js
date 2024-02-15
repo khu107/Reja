@@ -25,15 +25,10 @@ app.set("view engine", "ejs"); // ejs engine template
 
 // 4. router lar
 app.post("/create-item", function (req, res) {
-  console.log(req.body);
   const new_reja = req.body.reja;
   db.collection("plans").insertOne({ reja: new_reja }, (err, data) => {
-    if (err) {
-      console.log(err);
-      res.end("err");
-    } else {
-      res.end("success");
-    }
+    console.log(data.ops[0]);
+    res.json(data.ops[0]);
   });
 });
 

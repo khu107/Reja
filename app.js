@@ -1,18 +1,9 @@
 const express = require("express");
 const app = express();
-const fs = require("fs");
+
 const db = require("./server").db();
 const mongodb = require("mongodb");
 
-let user;
-
-fs.readFile("database/user.json", "utf8", (err, data) => {
-  if (err) {
-    console.log("err:", err);
-  } else {
-    user = JSON.parse(data);
-  }
-});
 // 1. express ga kirib kelayotgan malumotlarga bogliq bulgan kodlar.
 app.use(express.static("public")); // harqanday  browserdan kirib kelgan request uchun public fulderi ochiq degan manoni anglatadi.
 app.use(express.json()); // kirib kelayotgan json formatdagi datani object formtga uzgartirib beradi.

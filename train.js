@@ -1,7 +1,10 @@
-// Task - D
-function solution(str1, str2) {
-  const sortString = (str) => str.split("").sort().join("");
-  return sortString(str1) === sortString(str2);
+// Task - E
+function solution(str) {
+  let answer = "";
+  for (let i = str.length - 1; i >= 0; i--) {
+    answer += str[i];
+  }
+  return answer;
 }
 
-console.log(solution("mitgroup", "gmtiprou"));
+console.log(solution("hello"));

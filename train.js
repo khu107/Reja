@@ -1,10 +1,13 @@
-// Task - E
 function solution(str) {
-  let answer = "";
-  for (let i = str.length - 1; i >= 0; i--) {
-    answer += str[i];
-  }
-  return answer;
-}
+  const charSet = new Set();
 
+  for (let char of str) {
+    if (charSet.has(char)) {
+      return true;
+    }
+    charSet.add(char);
+  }
+
+  return false;
+}
 console.log(solution("hello"));
